@@ -110,8 +110,8 @@ app.post('/checkout', async (req, res) => {
         }
       ],
       mode: 'payment',
-      success_url: 'http://localhost:5173',
-      cancel_url: 'http://localhost:5173'
+      success_url: `${process.env.FRONT_END_URL}`,
+      cancel_url: `${process.env.FRONT_END_URL}`
     });
 
     const url=session.url;
