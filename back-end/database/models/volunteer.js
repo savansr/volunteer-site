@@ -7,12 +7,11 @@ const volunteerSchema=new mongoose.Schema({
       type:String,
       required:true
   },
-  orderId:{
+  message:{
     type:String,
-    required:true
-  },
-  paymentStatus:String
-
+    
+  }
+ 
 });
 
 const  Volunteer=mongoose.model('Volunteer',volunteerSchema);

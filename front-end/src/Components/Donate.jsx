@@ -13,8 +13,9 @@ const Donate = () => {
           e.preventDefault();
         try{
            setDisableBtn(true);
-          await axios.post("http://localhost:3500/checkout",{amount,name,email,message},{withCredentials:true,headers:{'Content-Type':'application/json'}})
-          .then(res=>{console.log(res.data)})
+          await axios.post("http://localhost:4000/checkout",{amount,name,email,message},{withCredentials:true,headers:{'Content-Type':'application/json'}})
+          .then(res=>{window.location.href=res.data.url});
+           
 
         }catch(error){
              setDisableBtn(false)

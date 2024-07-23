@@ -35,10 +35,10 @@ const Navbar = () => {
             
               </ul>
               <ul>
-                 <li><Link to='/'><FaSquareXTwitter /></Link></li>
-                 <li><Link to='/'><FaYoutube/></Link></li>
-                 <li><Link to='/'><FaSquareFacebook /></Link></li>
-                 <li><Link to='/'><BsInstagram/></Link></li>
+                 <li><Link to='#'><FaSquareXTwitter /></Link></li>
+                 <li><Link to='#'><FaYoutube/></Link></li>
+                 <li><Link to='#'><FaSquareFacebook /></Link></li>
+                 <li><Link to='#'><BsInstagram/></Link></li>
 
               </ul>
 

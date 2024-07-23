@@ -49,9 +49,7 @@ const Members = () => {
       <div className="container">
         <div className="heading_section">
            <h2 className='heading'>MEMBERS</h2>
-           <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-             Aliquam ipsum nemo vel omnis? Quasi, sint atque quia consequatur
-              quibusdam dolor?</p>
+           <p></p>
         </div>
           <div className="members_container">
            {

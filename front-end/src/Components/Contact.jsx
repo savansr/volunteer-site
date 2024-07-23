@@ -1,6 +1,7 @@
 import React,{useState} from 'react';
 import axios from 'axios';
 import {toast} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Contact = () => {
     const [name,setName]=useState('');
@@ -12,7 +13,7 @@ const Contact = () => {
           e.preventDefault();
 
           
-            await axios.post("http://localhost:3500/send",{name,email,phone,message},{withCredentials:true,headers:{"Content-Type":"application/json"}}).
+            await axios.post("http://localhost:4000/send",{name,email,phone,message},{withCredentials:true,headers:{"Content-Type":"application/json"}}).
             then((res)=>{
               setName("");
               setEmail("");
@@ -21,7 +22,7 @@ const Contact = () => {
               toast.success(res.data.message);
 
             }).catch(error=>{
-               console.log(error);
+               toast.error(error.message);
                
             });
             

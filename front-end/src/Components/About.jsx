@@ -6,11 +6,9 @@ const About = () => {
           <div className="hero">
             <div className="banner">
               <h1>Our Story</h1>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere voluptatem nemo nam soluta fugit
-                 aliquam maiores minus fuga. A nisi, reprehenderit veniam blanditiis cumque nihil ea distinctio 
-                 temporibus minima eos sequi, dolorem enim adipisci facere ipsa quo delectus ducimus dolor 
-                 doloremque et sed commodi. Quia facere cumque, excepturi dolorum, sapiente earum veniam aut 
-                 exercitationem corrupti eos suscipit dolore vel dolorem?</p>
+              <p>Welcome to [Your Organization Name], where we've just begun our journey of making a positive impact through volunteerism and generosity. Founded recently, our mission is simple yet powerful: to unite individuals who are passionate about creating change. Whether it's participating in local initiatives or contributing to important causes through donations, every action counts.
+
+Together, we're building a community driven by compassion and a shared vision for a better tomorrow. As we grow, our commitment remains steadfast in empowering communities and inspiring hope. Join us as we write the first chapters of our story, where each volunteer and supporter plays a crucial role in making a meaningful difference.</p>
             </div>
               <div className="banner">
                   <img src="/about.png" alt="about image" />

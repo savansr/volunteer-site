@@ -15,7 +15,7 @@ const Footer = () => {
         <h4>Support</h4>
         <ul>
           <li>India</li>
-          <li>crypto@gmail.com</li>
+          <li>demo@gmail.com</li>
           <li>+xxxxxxxxxx</li>
         
         </ul>
