@@ -16,7 +16,7 @@ const stripe = require('stripe')(`${process.env.SECRET_KEY}`);
 
 
 app.use(function(req, res, next) {
-  res.header('Access-Control-Allow-Origin', `${process.env.FRONT_END_URL}`);
+  res.header('Access-Control-Allow-Origin', 'https://volunteer-website-chi.vercel.app');
   res.header('Access-Control-Allow-Methods', 'POST');
   res.header('Access-Control-Allow-Headers', 'Content-Type');
   next();
@@ -26,7 +26,7 @@ app.use(function(req, res, next) {
 
 app.use(
   cors({
-    origin:`${process.env.FRONT_END_URL}`,
+    origin:'https://volunteer-website-chi.vercel.app',
     methods: ['POST'],
     credentials: true
   })
