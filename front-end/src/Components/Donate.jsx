@@ -13,7 +13,7 @@ const Donate = () => {
           e.preventDefault();
         try{
            setDisableBtn(true);
-          await axios.post("https://volunteer-website-api.vercel.app/checkout",{amount,name,email,message},{withCredentials:true,headers:{'Content-Type':'application/json'}})
+          await axios.post("https://volunteer-website.onrender.com/checkout",{amount,name,email,message},{withCredentials:true,headers:{'Content-Type':'application/json'}})
           .then(res=>{window.location.href=res.data.url});
            
 
