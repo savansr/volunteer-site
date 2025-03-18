@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import 'react-icons';
 import {Link } from 'react-router-dom';
+import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/clerk-react";
+import '../App.css'
 
- import { FaBitcoin, FaYoutube } from "react-icons/fa6";
- import { FaSquareXTwitter } from "react-icons/fa6";
+import { FaBitcoin, FaYoutube } from "react-icons/fa6";
+import { FaSquareXTwitter } from "react-icons/fa6";
 import { BsInstagram } from "react-icons/bs";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { FaSquareFacebook } from "react-icons/fa6";
@@ -32,7 +34,25 @@ const Navbar = () => {
             <li>
                  <Link to='/contact'>CONTACT</Link>
             </li>
-            
+            <li>
+              <SignedOut>
+                <SignInButton mode="modal">
+                  <button className="sign-in-button">
+                    Sign In
+                  </button>
+                </SignInButton>
+              </SignedOut>
+              <SignedIn>
+                <UserButton 
+                  afterSignOutUrl="/"
+                  appearance={{
+                    elements: {
+                      userButtonAvatarBox: "w-10 h-10"
+                    }
+                  }}
+                />
+              </SignedIn>
+            </li>
               </ul>
               <ul>
                  <li><Link to='#'><FaSquareXTwitter /></Link></li>
@@ -50,5 +70,9 @@ const Navbar = () => {
     </nav>
   );
 }
+
+
+
+
 
 export default Navbar;

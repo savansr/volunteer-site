@@ -27,7 +27,7 @@ app.use(function(req, res, next) {
 app.use(
   cors({
     origin:`${process.env.FRONT_END_URL}`,
-    methods: ['POST'],
+    methods: ['POST','GET','PUT','DELETE'],
     credentials: true
   })
 );
