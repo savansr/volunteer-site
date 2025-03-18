@@ -1,12 +1,13 @@
-import { defineConfig } from 'vite';
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
 
+// https://vitejs.dev/config/
 export default defineConfig({
-  optimizeDeps: {
-    include: ['@clerk/clerk-react'], // Ensure Clerk is included in the dependency optimization
-  },
+  plugins: [react()],
   build: {
     rollupOptions: {
-      external: [], // Do not externalize Clerk, let it be bundled
+      external: ['@clerk/clerk-react'],
     },
   },
-});
+ 
+})
