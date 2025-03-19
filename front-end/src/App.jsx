@@ -3,7 +3,7 @@ import './App.css';
 import {BrowserRouter as Router, Routes, Route, Navigate} from 'react-router-dom';
 import { ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-const { SignedIn, SignedOut, SignInButton, UserButton, RedirectToSignIn }=window.Clerk;
+import { SignedIn, SignedOut, SignInButton, UserButton, RedirectToSignIn } from '@clerk/clerk-react';
 
 import Home from './Components/Home';
 import About from './Components/About';
