@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import 'react-icons';
 import {Link } from 'react-router-dom';
-import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/clerk-react";
+const { SignedIn, SignedOut, SignInButton, UserButton }=window.Clerk;
 import '../App.css'
 
 import { FaBitcoin, FaYoutube } from "react-icons/fa6";
