@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx';
-const { ClerkProvider }=window.Clerk;
+import  { ClerkProvider } from '@clerk/clerk-react';
 
 const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY
 
