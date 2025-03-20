@@ -1,19 +1,25 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx';
-import { ClerkProvider } from '@clerk/clerk-react'
+import { Auth0Provider } from '@auth0/auth0-react'
 
-const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY
+const domain = import.meta.env.VITE_AUTH0_DOMAIN;
+const clientId = import.meta.env.VITE_AUTH0_CLIENT_ID;
 
-if (!PUBLISHABLE_KEY) {
-  throw new Error("Missing Publishable Key")
+if (!domain || !clientId) {
+  throw new Error("Missing Auth0 configuration");
 }
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-   <ClerkProvider publishableKey={PUBLISHABLE_KEY} afterSignOutUrl="/">
+    <Auth0Provider
+      domain={domain}
+      clientId={clientId}
+      authorizationParams={{
+        redirect_uri: window.location.origin
+      }}
+    >
       <App />
-    </ClerkProvider>
-  
+    </Auth0Provider>
   </React.StrictMode>,
 )
