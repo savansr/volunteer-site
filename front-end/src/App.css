@@ -783,20 +783,9 @@ footer div ul a span {
 }
 
 
-.sign-in-button {
-  background-color:#facc15;
-  color: black;
-  padding: 8px 16px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 16px;
-  transition: background-color 0.3s ease;
-}
 
-.sign-in-button:hover {
-  background-color:rgb(179, 179, 0);
-}
+
+
 
 /* Optional: Style the UserButton container to align with other nav items */
 .cl-userButtonTrigger {
@@ -804,3 +793,16 @@ footer div ul a span {
   align-items: center;
 }
 
+.sign-in-button, .sign-out-button {
+  background-color: #facc15;
+  color: black;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.sign-in-button:hover, .sign-out-button:hover {
+  background-color: #facc15;
+}

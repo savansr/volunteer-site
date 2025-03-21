@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { useAuth0 } from '@auth0/auth0-react';
-import '../App.css'
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { useAuth0 } from "@auth0/auth0-react";
+import "../App.css";
 
 import { FaBitcoin, FaYoutube } from "react-icons/fa6";
 import { FaSquareXTwitter } from "react-icons/fa6";
@@ -14,43 +14,41 @@ const Navbar = () => {
   const { isAuthenticated, loginWithRedirect, logout, user } = useAuth0();
 
   return (
-    <nav className={`navbar ${show ? 'show_navbar' :' '}`}>
+    <nav className={`navbar ${show ? "show_navbar" : ""}`}>
       <div className="logo">
         <img src="/logo.png" alt="logo" />
       </div>
       <div className="links">
         <ul>
-          <li><Link to='/'>HOME</Link></li>
-          <li><Link to='/donate'>DONATE US</Link></li>
-          <li><Link to='/about'>ABOUT</Link></li>
-          <li><Link to='/contact'>CONTACT</Link></li>
+          <li><Link to="/">HOME</Link></li>
+          <li><Link to="/donate">DONATE US</Link></li>
+          <li><Link to="/about">ABOUT</Link></li>
+          <li><Link to="/contact">CONTACT</Link></li>
           <li>
             {!isAuthenticated ? (
               <button className="sign-in-button" onClick={() => loginWithRedirect()}>
                 Sign In
               </button>
             ) : (
-              <div className="user-profile">
-                <img 
-                  src={user?.picture} 
-                  alt={user?.name}
-                  className="w-10 h-10 rounded-full cursor-pointer"
-                  onClick={() => logout({ returnTo: window.location.origin })}
-                />
-              </div>
+              <button 
+                className="sign-out-button" 
+                onClick={() => logout({ returnTo: window.location.origin })}
+              >
+                Sign Out
+              </button>
             )}
           </li>
         </ul>
         <ul>
-          <li><Link to='#'><FaSquareXTwitter /></Link></li>
-          <li><Link to='#'><FaYoutube/></Link></li>
-          <li><Link to='#'><FaSquareFacebook /></Link></li>
-          <li><Link to='#'><BsInstagram/></Link></li>
+          <li><Link to="#"><FaSquareXTwitter /></Link></li>
+          <li><Link to="#"><FaYoutube /></Link></li>
+          <li><Link to="#"><FaSquareFacebook /></Link></li>
+          <li><Link to="#"><BsInstagram /></Link></li>
         </ul>
       </div>
-      <GiHamburgerMenu className='hamburger' onClick={()=>setShow(!show)} />
+      <GiHamburgerMenu className="hamburger" onClick={() => setShow(!show)} />
     </nav>
   );
-}
+};
 
 export default Navbar;
