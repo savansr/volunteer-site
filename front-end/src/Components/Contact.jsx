@@ -13,7 +13,7 @@ const Contact = () => {
           e.preventDefault();
 
           
-            await axios.post("https://volunteer-website.onrender.com/send",{name,email,phone,message},{withCredentials:true,headers:{"Content-Type":"application/json"}}).
+            await axios.post("https://volunteer-site-1.onrender.com/send",{name,email,phone,message},{withCredentials:true,headers:{"Content-Type":"application/json"}}).
             then((res)=>{
               setName("");
               setEmail("");
